@@ -17,7 +17,7 @@ function BP_FirstPersonProjectile:Initialize(Initializer)
     --02
     ]]
     print(msg)
-    Screen.Print(msg)
+    Screen.Print(msg , UE.FLinearColor( 1 , 1 , 0 , 1))
 end
 
 -- function M:UserConstructionScript()
