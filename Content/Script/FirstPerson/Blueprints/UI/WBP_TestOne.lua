@@ -32,7 +32,7 @@ end
 --访问c++中的属性
 function M:OnClick_One()
     --获取world
-    local world = self:GetWorld()package.cpath = package.cpath .. ";c:/Users/zf18099/.vscode/extensions/tangzx.emmylua-0.9.15-win32-x64/debugger/emmy/windows/x64/?.dll"
+    local world = self:GetWorld()
     -- local dbg = require("emmy_core")
     -- dbg.tcpListen("localhost", 9966)
     --判断world的有效性
