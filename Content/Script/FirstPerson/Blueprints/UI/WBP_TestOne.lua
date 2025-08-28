@@ -21,7 +21,7 @@ function M:Construct()
     local msg = "Hello Unreal " .. UE.UTestLuaUtils.GetInt() .. " " .. self.Title
     print(msg)
     print(tostring(self.Button_Main))
-    Screen.Print(msg,UE.FLinearColor( 0 , 1 , 0 , 1),7.0)
+    Screen.Print(msg,UE.FLinearColor( 1 , 1 , 0 , 1),7.0)
     --self:ShowButton()
     self:PlayAnimation(self.Start,0,1)
 

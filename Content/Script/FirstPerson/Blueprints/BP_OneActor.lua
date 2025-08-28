@@ -40,7 +40,9 @@ end
 -- function BP_OneActor:ReceiveEndPlay()
 -- end
 
+-- 暂时取消Tick事件
 -- function BP_OneActor:ReceiveTick(DeltaSeconds)
+--     Screen.Print( self:GetIndex() )
 -- end
 
 -- function BP_OneActor:ReceiveAnyDamage(Damage, DamageType, InstigatedBy, DamageCauser)
