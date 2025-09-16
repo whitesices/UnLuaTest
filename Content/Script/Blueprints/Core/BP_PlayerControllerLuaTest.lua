@@ -21,6 +21,8 @@ function BP_PlayerControllerLuaTest:ReceiveBeginPlay()
     --打印
     local msg = "This is " .. UE.UKismetSystemLibrary.GetDisplayName(self)
     Screen.Print( msg , UE.FLinearColor( 0 , 1 , 1 , 1), 7.0 )
+    -- 设定显示鼠标
+    self.bShowMouseCursor = true
     --BeginPlay里初始化两个变量,初始化旋转参数和方向向量参数
     self.ControlRot = UE.FRotator()
     self.ForwardVec = UE.FVector()

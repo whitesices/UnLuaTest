@@ -21,7 +21,7 @@ function BP_PlayerLuaTest:ReceiveBeginPlay()
         --通过调用通用函数库的方法获取名字
     local msg = "Hello there is " .. UE.UKismetSystemLibrary.GetDisplayName(self)
     --打印相应的信息
-    Screen.Print(msg,UE.FLinearColor( 0 , 1 , 1 , 1),7.0)
+    Screen.Print(msg,UE.FLinearColor( 1 , 1 , 0 , 1),7.0)
 
     --beginplay中声明初始化FOV的相应变量参数
     --获取默认相机参数，DefaultFOV在蓝图中声明
