@@ -74,8 +74,9 @@ function M:BlueprintUpdateAnimation(DeltaTimeX)
         local ForwardVec = Rot:GetForwardVector( self.ForwardVec )
         --获取右转向量
         local RightVec = Rot:GetRightVector( self.RightVec )
-        local DP0 = Vel:Dot(RightVec)
-        local DP1 = Vel:Dot(ForwardVec)
+        --最终的移动方向分解成X 和 Y两个维度的方向向量
+        local DP0 = Vel:Dot(RightVec) --cos()
+        local DP1 = Vel:Dot(ForwardVec) --cos()
         local Angle = UE.UKismetSystemLibrary.Acos(DP1)
         --判断是否大于零
         if DP1 > 0.0 then

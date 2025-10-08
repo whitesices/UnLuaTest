@@ -90,23 +90,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zf18099\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\16428\\.nuget\\packages\\": {},
+    "D:\\vs19share\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\02_UEProject\\UnLuaTest\\Plugins\\UnLua\\Source\\UnLuaDefaultParamCollectorUbtPlugin\\UnLuaDefaultParamCollectorUbtPlugin.ubtplugin.csproj",
+      "projectUniqueName": "D:\\UEProject\\UnLuaTest\\Plugins\\UnLua\\Source\\UnLuaDefaultParamCollectorUbtPlugin\\UnLuaDefaultParamCollectorUbtPlugin.ubtplugin.csproj",
       "projectName": "UnLuaDefaultParamCollectorUbtPlugin",
-      "projectPath": "D:\\02_UEProject\\UnLuaTest\\Plugins\\UnLua\\Source\\UnLuaDefaultParamCollectorUbtPlugin\\UnLuaDefaultParamCollectorUbtPlugin.ubtplugin.csproj",
-      "packagesPath": "C:\\Users\\zf18099\\.nuget\\packages\\",
-      "outputPath": "D:\\02_UEProject\\UnLuaTest\\Plugins\\UnLua\\Source\\UnLuaDefaultParamCollectorUbtPlugin\\obj\\",
+      "projectPath": "D:\\UEProject\\UnLuaTest\\Plugins\\UnLua\\Source\\UnLuaDefaultParamCollectorUbtPlugin\\UnLuaDefaultParamCollectorUbtPlugin.ubtplugin.csproj",
+      "packagesPath": "C:\\Users\\16428\\.nuget\\packages\\",
+      "outputPath": "D:\\UEProject\\UnLuaTest\\Plugins\\UnLua\\Source\\UnLuaDefaultParamCollectorUbtPlugin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\vs19share\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\zf18099\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\16428\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

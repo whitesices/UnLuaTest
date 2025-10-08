@@ -19,8 +19,8 @@ local BP_PlayerControllerLuaTest = UnLua.Class()
 
 function BP_PlayerControllerLuaTest:ReceiveBeginPlay()
     --打印
-    local msg = "This is " .. UE.UKismetSystemLibrary.GetDisplayName(self)
-    Screen.Print( msg , UE.FLinearColor( 0 , 1 , 1 , 1), 7.0 )
+    -- local msg = "This is " .. UE.UKismetSystemLibrary.GetDisplayName(self)
+    -- Screen.Print( msg , UE.FLinearColor( 0 , 1 , 1 , 1), 7.0 )
     -- 设定显示鼠标
     self.bShowMouseCursor = true
     --BeginPlay里初始化两个变量,初始化旋转参数和方向向量参数
@@ -96,35 +96,49 @@ end
 
 --调用自定义的按键函数
 function BP_PlayerControllerLuaTest:Fire_Pressed()
-    local msg = "PlayerController : Fire Fire_Pressed"
-    Screen.Print(msg)
+    -- local msg = "PlayerController : Fire Fire_Pressed"
+    -- Screen.Print(msg , UE.FLinearColor(0,1,1,1),2.0)
+    if not self.Pawn then
+        return
+    end
+    --加载继承的接口
+    local GetInterface = UE.UClass.Load("/Game/Blueprints/Interfaces/BPI_Player.BPI_Player_C")
+    GetInterface.StartFire(self.Pawn)
+
 end
 
 function BP_PlayerControllerLuaTest:Fire_Released()
-    local msg = "PlayerController : Fire Fire_Released"
-    Screen.Print(msg)
+    -- local msg = "PlayerController : Fire Fire_Released"
+    -- Screen.Print(msg)
+    --加载继承的接口
+    local GetInterface = UE.UClass.Load("/Game/Blueprints/Interfaces/BPI_Player.BPI_Player_C")
+    GetInterface.StopFire(self.Pawn)
 end
 
 function BP_PlayerControllerLuaTest:Aim_Pressed()
-    local msg = "PlayerController : Aim Aim_Pressed"
-    Screen.Print(msg)
+    -- local msg = "PlayerController : Aim Aim_Pressed"
+    -- Screen.Print(msg)
     --判断Pawn的有效性
     if not self.Pawn then
         return
     end
     --更新FOV值
-    self.Pawn:UpdateAiming(true)
+    local GetInterface = UE.UClass.Load("/Game/Blueprints/Interfaces/BPI_Player.BPI_Player_C")
+    GetInterface.UpdateAiming(self.Pawn,true)
+--     self.Pawn:UpdateAiming(true)
 end
 
 function BP_PlayerControllerLuaTest:Aim_Released()
-    local msg = "PlayerController : Aim Aim_Released"
-    Screen.Print(msg)
+    -- local msg = "PlayerController : Aim Aim_Released"
+    -- Screen.Print(msg)
     --判断Pawn的有效性
     if not self.Pawn then
         return
     end
     --还原FOV值
-    self.Pawn:UpdateAiming(false)
+    local GetInterface = UE.UClass.Load("/Game/Blueprints/Interfaces/BPI_Player.BPI_Player_C")
+    GetInterface.UpdateAiming(self.Pawn,false)
+    -- self.Pawn:UpdateAiming(false)
 end
 
 return BP_PlayerControllerLuaTest
